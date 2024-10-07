@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
-Hello world!
+<div>
+    <img alt="background" class="bgImg" src="./assets/images/64930225_p0.jpg">
+    <div class="flex-center full-screen">
+        <div class="card glass-card md-size-screen p-5">
+            <div class="flex-center fs-3">Counter</div>
+            <button class="my-2" id="CounterButton">Count +1</button>
+            <div id="CounterText">Number: 0</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let Count = 0
+    const CounterButton = document.getElementById('CounterButton');
+    const CounterText = document.getElementById('CounterText');
+    CounterButton.onclick = () => {
+        Count += 1
+        CounterText.innerText = `Number: ${Count}`
+    }
+</script>
+
 </body>
 </html>
